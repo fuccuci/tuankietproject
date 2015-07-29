@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="QuanLyCTV">
+</Property><Property Name="Solution File" Value="C:\phuc_data\Project template\QuanLyCTV-Access-New\QuanLyCTV.sln">
+</Property><Property Name="Date" Value="Tuesday, May 20, 2008">
+</Property><Property Name="Time" Value="10:15 AM">
+</Property></Properties><Event ErrorLevel="0" Project="QuanLyCTV" Source="QuanLyCTV.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="QuanLyCTV" Source="QuanLyCTV.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="QuanLyCTV.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="QuanLyCTV.sln" Description="Converted">
+</Event><Event ErrorLevel="3" Project="QuanLyCTV" Source="Global.vb" Description="file converted">
+</Event></UpgradeLog>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsBaoCaoThuChi" targetNamespace="http://tempuri.org/dsBaoCaoThuChi.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dsBaoCaoThuChi.xsd" xmlns:mstns="http://tempuri.org/dsBaoCaoThuChi.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsBaoCaoThuChi" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="qryCountry">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CountryName" type="xs:string" minOccurs="0" />
+							<xs:element name="StationName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="qryBaoCaoThuChi">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Recei_Expen_Date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Recei_No" type="xs:long" minOccurs="0" />
+							<xs:element name="Expen_No" type="xs:long" minOccurs="0" />
+							<xs:element name="Charge_Cycle" type="xs:date" minOccurs="0" />
+							<xs:element name="Descriptions" type="xs:string" minOccurs="0" />
+							<xs:element name="Recei_Money" type="xs:double" minOccurs="0" />
+							<xs:element name="Expen_Money" type="xs:double" minOccurs="0" />
+							<xs:element name="Employ_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="Service_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="List_Quantity" type="xs:int" minOccurs="0" />
+							<xs:element name="Invoice_Quantity" type="xs:int" minOccurs="0" />
+							<xs:element name="List_Detail" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="qryNgay">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="fromDate" type="xs:date" minOccurs="0" />
+							<xs:element name="toDate" type="xs:date" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="qryBaoCaoGNT">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NgayNop" type="xs:date" minOccurs="0" />
+							<xs:element name="SoPT" type="xs:long" minOccurs="0" />
+							<xs:element name="SoGNT" type="xs:long" minOccurs="0" />
+							<xs:element name="KyCuoc" type="xs:date" minOccurs="0" />
+							<xs:element name="MoTa" type="xs:string" minOccurs="0" />
+							<xs:element name="SoTK" type="xs:string" minOccurs="0" />
+							<xs:element name="SoTT" type="xs:double" minOccurs="0" />
+							<xs:element name="NguoiNop" type="xs:string" minOccurs="0" />
+							<xs:element name="DichVu" type="xs:string" minOccurs="0" />
+							<xs:element name="SLBK" type="xs:long" minOccurs="0" />
+							<xs:element name="CTBK" type="xs:string" minOccurs="0" />
+							<xs:element name="SLHD" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="QryReportsUNC">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Receipt_Date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Ordinal_No" type="xs:long" minOccurs="0" />
+							<xs:element name="Service_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="Descriptions" type="xs:string" minOccurs="0" />
+							<xs:element name="List_Quantity" type="xs:short" minOccurs="0" />
+							<xs:element name="Invoice_Quantity" type="xs:short" minOccurs="0" />
+							<xs:element name="Charge_Cycle" type="xs:date" minOccurs="0" />
+							<xs:element name="Total_Money" type="xs:double" minOccurs="0" />
+							<xs:element name="Employ_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="SLUNC" type="xs:short" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

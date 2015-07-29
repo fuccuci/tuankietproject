@@ -1,0 +1,758 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A885D35F-E6B7-49BF-AB48-2877D36ACA8F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>QuanLyCTV</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>QuanLyCTV</RootNamespace>
+    <StartupObject>QuanLyCTV.Splash</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>QuanLyCTV.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>QuanLyCTV.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ConvertNumberToChar">
+      <Name>ConvertNumberToChar</Name>
+      <HintPath>..\..\QuanLyCTV-Access\bin\ConvertNumberToChar.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Interop.ADODB">
+      <Name>Interop.ADODB</Name>
+      <HintPath>..\..\QuanLyCTV-Access\bin\Interop.ADODB.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel">
+      <Name>Interop.Excel</Name>
+      <HintPath>..\..\QuanLyCTV-Access\bin\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core">
+      <Name>Interop.Microsoft.Office.Core</Name>
+      <HintPath>..\..\QuanLyCTV-Access\bin\Interop.Microsoft.Office.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\ClassCreateUser.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\CMenuItem.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DataGridComboBoxColumn.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DsBaoCaoNgay.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Components\dsBaoCaoThuChi.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Components\DsChiNop.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Components\DsGiayNopTien.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Components\DsReceiptsDetail.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Components\DsSoQuy.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Components\dsTableImport.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Components\DsTongHopGNT.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Components\KDNGrid.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\NoKeyUpCombo.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\SplitNumbers.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBankAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBanks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBaoCaoChiNop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBaoCaoNgayThang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBaoCaoThucCuoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBaoCaoThuchi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBaoCaoTongHopThu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCapnhatGNT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmchitiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmconnection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCountry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDaily.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExpenses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFind.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmgiaiquyetkhieunai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGiaoDauKy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmlistReceipts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrintOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReceipts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSetpassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSetpasswordUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStatistics.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\frmThanhtoanDL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTongHopGNT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTongHopThuTheoKyCuoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmtraloikhieunai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTram.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reports\BaoCaoGNT.vb">
+      <DependentUpon>BaoCaoGNT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\BaoCaoGNTDetail.vb">
+      <DependentUpon>BaoCaoGNTDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\BaoCaoUNC.vb">
+      <DependentUpon>BaoCaoUNC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\BaoCaoUNCDetail.vb">
+      <DependentUpon>BaoCaoUNCDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportbaocaongayDetail.vb">
+      <DependentUpon>CrystalReportbaocaongayDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportBaoCaoNhanh.vb">
+      <DependentUpon>CrystalReportBaoCaoNhanh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportBaoCaoQuy.vb">
+      <DependentUpon>CrystalReportBaoCaoQuy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportBieudo.vb">
+      <DependentUpon>CrystalReportBieudo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportBKNT.vb">
+      <DependentUpon>CrystalReportBKNT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportChiNop.vb">
+      <DependentUpon>CrystalReportChiNop.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportGNT.vb">
+      <DependentUpon>CrystalReportGNT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportNgayThang.vb">
+      <DependentUpon>CrystalReportNgayThang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportOrder.vb">
+      <DependentUpon>CrystalReportOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportPSTNDLReceiptDetail.vb">
+      <DependentUpon>CrystalReportPSTNDLReceiptDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportReceiptByService.vb">
+      <DependentUpon>CrystalReportReceiptByService.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportReceiptDetail.vb">
+      <DependentUpon>CrystalReportReceiptDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportReceiptDetailOfEmployee.vb">
+      <DependentUpon>CrystalReportReceiptDetailOfEmployee.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportSumGNT.vb">
+      <DependentUpon>CrystalReportSumGNT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportSumReceipts.vb">
+      <DependentUpon>CrystalReportSumReceipts.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportSumTMGNTUNC.vb">
+      <DependentUpon>CrystalReportSumTMGNTUNC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportSumUNC.vb">
+      <DependentUpon>CrystalReportSumUNC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportThuChi.vb">
+      <DependentUpon>CrystalReportThuChi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportThuChiDetail.vb">
+      <DependentUpon>CrystalReportThuChiDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportTongHopGNT.vb">
+      <DependentUpon>CrystalReportTongHopGNT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportTongHopGNTDetail.vb">
+      <DependentUpon>CrystalReportTongHopGNTDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReportUNCReceiptDetail.vb">
+      <DependentUpon>CrystalReportUNCReceiptDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReport_Expense.vb">
+      <DependentUpon>CrystalReport_Expense.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\CrystalReport_Receipts.vb">
+      <DependentUpon>CrystalReport_Receipts.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\{2E6E407D-D1CF-4851-A3F4-353316CCF108}.vb">
+      <DependentUpon>{2E6E407D-D1CF-4851-A3F4-353316CCF108}.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\{475027C8-1BEF-459F-8B8F-20CD38460CDD}.vb">
+      <DependentUpon>{475027C8-1BEF-459F-8B8F-20CD38460CDD}.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\{B314F2AE-F019-4B40-9BBF-BEE9A8D8D7AA}.vb">
+      <DependentUpon>{B314F2AE-F019-4B40-9BBF-BEE9A8D8D7AA}.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\{FCF48968-7D83-4B68-868E-977A46124842}.vb">
+      <DependentUpon>{FCF48968-7D83-4B68-868E-977A46124842}.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <EmbeddedResource Include="Components\CMenuItem.resx">
+      <DependentUpon>CMenuItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\DataGridComboBoxColumn.resx">
+      <DependentUpon>DataGridComboBoxColumn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\KDNGrid.resx">
+      <DependentUpon>KDNGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\NoKeyUpCombo.resx">
+      <DependentUpon>NoKeyUpCombo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBankAccounts.resx">
+      <DependentUpon>frmBankAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBanks.resx">
+      <DependentUpon>frmBanks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBaoCaoChiNop.resx">
+      <DependentUpon>frmBaoCaoChiNop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBaoCaoNgayThang.resx">
+      <DependentUpon>frmBaoCaoNgayThang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBaoCaoThucCuoc.resx">
+      <DependentUpon>frmBaoCaoThucCuoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBaoCaoThuchi.resx">
+      <DependentUpon>frmBaoCaoThuchi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBaoCaoTongHopThu.resx">
+      <DependentUpon>frmBaoCaoTongHopThu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCapnhatGNT.resx">
+      <DependentUpon>frmCapnhatGNT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmchitiet.resx">
+      <DependentUpon>frmchitiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmconnection.resx">
+      <DependentUpon>frmconnection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCountry.resx">
+      <DependentUpon>frmCountry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDaily.resx">
+      <DependentUpon>frmDaily.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditReceipt.resx">
+      <DependentUpon>frmEditReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEmployee.resx">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExpenses.resx">
+      <DependentUpon>frmExpenses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFind.resx">
+      <DependentUpon>frmFind.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmgiaiquyetkhieunai.resx">
+      <DependentUpon>frmgiaiquyetkhieunai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGiaoDauKy.resx">
+      <DependentUpon>frmGiaoDauKy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImports.resx">
+      <DependentUpon>frmImports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmlistReceipts.resx">
+      <DependentUpon>frmlistReceipts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewUser.resx">
+      <DependentUpon>frmNewUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPreview.resx">
+      <DependentUpon>frmPreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPrintOrder.resx">
+      <DependentUpon>frmPrintOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReceipts.resx">
+      <DependentUpon>frmReceipts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReports.resx">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSetpassword.resx">
+      <DependentUpon>frmSetpassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSetpasswordUser.resx">
+      <DependentUpon>frmSetpasswordUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStatistics.resx">
+      <DependentUpon>frmStatistics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmThanhtoanDL.resx">
+      <DependentUpon>frmThanhtoanDL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTongHopGNT.resx">
+      <DependentUpon>frmTongHopGNT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTongHopThuTheoKyCuoc.resx">
+      <DependentUpon>frmTongHopThuTheoKyCuoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmtraloikhieunai.resx">
+      <DependentUpon>frmtraloikhieunai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTram.resx">
+      <DependentUpon>frmTram.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BaoCaoGNT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCaoGNT.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BaoCaoGNTDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCaoGNTDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BaoCaoUNC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCaoUNC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BaoCaoUNCDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCaoUNCDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportbaocaongayDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportbaocaongayDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportBaoCaoNhanh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportBaoCaoNhanh.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportBaoCaoQuy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportBaoCaoQuy.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportBieudo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportBieudo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportBKNT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportBKNT.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportChiNop.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportChiNop.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportGNT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportGNT.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportNgayThang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportNgayThang.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportOrder.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportPSTNDLReceiptDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportPSTNDLReceiptDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportReceiptByService.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportReceiptByService.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportReceiptDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportReceiptDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportReceiptDetailOfEmployee.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportReceiptDetailOfEmployee.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportSumGNT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSumGNT.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportSumReceipts.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSumReceipts.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportSumTMGNTUNC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSumTMGNTUNC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportSumUNC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSumUNC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportThuChi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportThuChi.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportThuChiDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportThuChiDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportTongHopGNT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportTongHopGNT.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportTongHopGNTDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportTongHopGNTDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportUNCReceiptDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportUNCReceiptDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport_Expense.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_Expense.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport_Receipts.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_Receipts.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\{2E6E407D-D1CF-4851-A3F4-353316CCF108}.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>{2E6E407D-D1CF-4851-A3F4-353316CCF108}.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\{475027C8-1BEF-459F-8B8F-20CD38460CDD}.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>{475027C8-1BEF-459F-8B8F-20CD38460CDD}.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\{B314F2AE-F019-4B40-9BBF-BEE9A8D8D7AA}.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>{B314F2AE-F019-4B40-9BBF-BEE9A8D8D7AA}.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\{FCF48968-7D83-4B68-868E-977A46124842}.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>{FCF48968-7D83-4B68-868E-977A46124842}.vb</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Components\DsBaoCaoNgay.xsd" />
+    <Content Include="Components\dsBaoCaoThuChi.xsd" />
+    <Content Include="Components\DsChiNop.xsd" />
+    <Content Include="Components\DsGiayNopTien.xsd" />
+    <Content Include="Components\DsReceiptsDetail.xsd" />
+    <Content Include="Components\DsSoQuy.xsd" />
+    <Content Include="Components\dsTableImport.xsd" />
+    <Content Include="Components\DsTongHopGNT.xsd" />
+    <None Include="Components\DsBaoCaoNgay.xsx">
+      <DependentUpon>DsBaoCaoNgay.xsd</DependentUpon>
+    </None>
+    <None Include="Components\dsBaoCaoThuChi.xsx">
+      <DependentUpon>dsBaoCaoThuChi.xsd</DependentUpon>
+    </None>
+    <None Include="Components\DsChiNop.xsx">
+      <DependentUpon>DsChiNop.xsd</DependentUpon>
+    </None>
+    <None Include="Components\DsGiayNopTien.xsx">
+      <DependentUpon>DsGiayNopTien.xsd</DependentUpon>
+    </None>
+    <None Include="Components\DsReceiptsDetail.xsx">
+      <DependentUpon>DsReceiptsDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Components\DsSoQuy.xsx">
+      <DependentUpon>DsSoQuy.xsd</DependentUpon>
+    </None>
+    <None Include="Components\dsTableImport.xsx">
+      <DependentUpon>dsTableImport.xsd</DependentUpon>
+    </None>
+    <None Include="Components\DsTongHopGNT.xsx">
+      <DependentUpon>DsTongHopGNT.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

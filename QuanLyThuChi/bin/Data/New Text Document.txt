@@ -1,0 +1,31 @@
+Public Shared Function GetReader() AS OleDBDataReader
+
+
+Dim myReader as OleDbDataReader
+Dim myOleDbConnection as OleDbConnection
+Dim myOleDbCommand as OleDbCommand
+
+myOleDbConnection = new OleDbConnection("Server=localhost;" & "Database=NORTHWIND.MDB;UID=sa;PWD="")
+
+myOleDbCommand = new OleDbCommand("SELECT * FROM Employees", myOleDbConnection)
+
+Try
+
+myOleDbConnection.Open()
+
+myReader = myOleDbCommand.ExecuteReader()
+
+Catch
+
+
+Finally
+
+myOleDbConnection.Close()
+
+End Try
+
+
+Return myReader
+
+
+End Function 

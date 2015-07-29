@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DsTongHopGNT" targetNamespace="http://tempuri.org/DsTongHopGNT.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/DsTongHopGNT.xsd" xmlns:mstns="http://tempuri.org/DsTongHopGNT.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DsTongHopGNT" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="valueNgay">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TuNgay" type="xs:string" minOccurs="0" />
+							<xs:element name="DenNgay" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="QryGNTNopThu">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NgayThuchi" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="SoPhieuThuChi" type="xs:short" minOccurs="0" />
+							<xs:element name="KyCuoc" type="xs:string" minOccurs="0" />
+							<xs:element name="TienNop" type="xs:double" minOccurs="0" />
+							<xs:element name="NhanVien" type="xs:string" minOccurs="0" />
+							<xs:element name="SoTaiKhoan" type="xs:string" minOccurs="0" />
+							<xs:element name="NgayNopThu" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="SoGNT" type="xs:short" minOccurs="0" />
+							<xs:element name="DichVu" type="xs:string" minOccurs="0" />
+							<xs:element name="TienThu" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="qryCountry">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CountryName" type="xs:string" minOccurs="0" />
+							<xs:element name="StationName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

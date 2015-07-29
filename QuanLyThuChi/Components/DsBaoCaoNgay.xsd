@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DsBaoCaoNgay" targetNamespace="http://tempuri.org/DsBaoCaoNgay.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/DsBaoCaoNgay.xsd" xmlns:mstns="http://tempuri.org/DsBaoCaoNgay.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DsBaoCaoNgay" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="qryCountry">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CountryName" type="xs:string" minOccurs="0" />
+							<xs:element name="StationName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="qryNgay">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="fromDate" type="xs:date" minOccurs="0" />
+							<xs:element name="toDate" type="xs:date" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="QryBaoCaoNgay">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Receipt_Date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Ordinal_No" type="xs:short" minOccurs="0" />
+							<xs:element name="Service_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="List_Quantity" type="xs:short" minOccurs="0" />
+							<xs:element name="Invoice_Quantity" type="xs:short" minOccurs="0" />
+							<xs:element name="Charge_Cycle" type="xs:string" minOccurs="0" />
+							<xs:element name="Total_Money" type="xs:double" minOccurs="0" />
+							<xs:element name="Employ_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="MaLoaiThu" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

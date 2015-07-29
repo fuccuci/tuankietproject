@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DsGiayNopTien" targetNamespace="http://tempuri.org/DsGiayNopTien.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/DsGiayNopTien.xsd" xmlns:mstns="http://tempuri.org/DsGiayNopTien.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DsGiayNopTien" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="QueryReceipts">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Ordinal_No" type="xs:short" minOccurs="0" />
+							<xs:element name="List_Quantity" type="xs:short" minOccurs="0" />
+							<xs:element name="Invoice_Quantity" type="xs:short" minOccurs="0" />
+							<xs:element name="Total_Money" type="xs:double" minOccurs="0" />
+							<xs:element name="Employ_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="FillName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="QueryEmployeeCodes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Employ_Code" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GetCountry_station">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CountryName" type="xs:string" minOccurs="0" />
+							<xs:element name="Station_Name" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GetValuePar">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SBKNT" type="xs:int" minOccurs="0" />
+							<xs:element name="ChuKy" type="xs:string" minOccurs="0" />
+							<xs:element name="Ngay" type="xs:date" minOccurs="0" />
+							<xs:element name="DichVu" type="xs:string" minOccurs="0" />
+							<xs:element name="MaNguoiNop" type="xs:string" minOccurs="0" />
+							<xs:element name="TenNguoiNop" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GetCountry_station1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CountryName" type="xs:string" minOccurs="0" />
+							<xs:element name="Station_Name" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="DsGiayNopTienKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:QueryEmployeeCodes" />
+			<xs:field xpath="mstns:Employ_Code" />
+		</xs:key>
+		<xs:keyref name="QueryEmployeeCodesQueryReceipts" refer="DsGiayNopTienKey1">
+			<xs:selector xpath=".//mstns:QueryReceipts" />
+			<xs:field xpath="mstns:Employ_Code" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DsSoQuy" targetNamespace="http://tempuri.org/DsSoQuy.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/DsSoQuy.xsd" xmlns:mstns="http://tempuri.org/DsSoQuy.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DsSoQuy" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="QueryReport_SoQuy">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Recei_Expen_Date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Recei_No" type="xs:short" minOccurs="0" />
+							<xs:element name="Expen_No" type="xs:short" minOccurs="0" />
+							<xs:element name="Descriptions" type="xs:string" minOccurs="0" />
+							<xs:element name="Recei_Money" type="xs:double" minOccurs="0" />
+							<xs:element name="Expen_Money" type="xs:double" minOccurs="0" />
+							<xs:element name="TonQuy" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="QueryTonDauKy">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DauKy" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="QueryTonCuoiKy">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CuoiKy" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="NgayBaoCao">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TuNgay" type="xs:string" minOccurs="0" />
+							<xs:element name="Denngay" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DsSoQuyKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:QueryReport_SoQuy" />
+			<xs:field xpath="mstns:ID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

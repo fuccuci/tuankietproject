@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DsChiNop" targetNamespace="http://tempuri.org/DsChiNop.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/DsChiNop.xsd" xmlns:mstns="http://tempuri.org/DsChiNop.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DsChiNop" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="QryReportsChiNop">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Expense_Date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Ordinal_No" type="xs:short" minOccurs="0" />
+							<xs:element name="Descriptions" type="xs:string" minOccurs="0" />
+							<xs:element name="List_Quantity" type="xs:short" minOccurs="0" />
+							<xs:element name="Charge_Cycle" type="xs:string" minOccurs="0" />
+							<xs:element name="Employ_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="Account_No" type="xs:string" minOccurs="0" />
+							<xs:element name="Bank_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="Status" type="xs:boolean" minOccurs="0" />
+							<xs:element name="Service_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="Total_Money" type="xs:double" minOccurs="0" />
+							<xs:element name="Pay_No" type="xs:short" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="valueNgay">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TuNgay" type="xs:string" minOccurs="0" />
+							<xs:element name="DenNgay" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
